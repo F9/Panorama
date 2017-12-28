@@ -259,6 +259,10 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
 	_attitudeMatrix = GLKMatrix4MakeLookAt(0, 0, 0, v.x, v.y, v.z,  0, 1, 0);
 	[self updateLook];
 }
+-(void) setUpSecondMatrix:(GLKMatrix4)vector {
+    _offsetMatrix = vector;
+}
+
 -(void) orientToAzimuth:(float)azimuth Altitude:(float)altitude{
 	[self orientToVector:GLKVector3Make(-cosf(azimuth), sinf(altitude), sinf(azimuth))];
 }

@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-
+#import <GLKit/GLKit.h>
 /**
  * @class Panorama View
  * @author Robby Kraft
@@ -58,6 +58,9 @@
  * @param GLKVector3 can be non-normalized
  */
 -(void) orientToVector:(GLKVector3)vector;
+
+
+-(void) setUpSecondMatrix:(GLKMatrix4)vector;
 
 /**
  * Align Z coordinate axis (into the screen) to azimuth and altitude.
